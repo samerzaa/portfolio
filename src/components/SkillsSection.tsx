@@ -66,7 +66,7 @@ const SkillsSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4 font-prompt">
-            My <span className="text-white">Skills</span>
+            My <span className="text-white">Skills </span>
           </h2>
           <p className="text-lg text-gray-light max-w-2xl mx-auto font-karla">
             A comprehensive toolkit for building modern, scalable applications
