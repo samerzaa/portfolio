@@ -14,11 +14,11 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-white/10">
+    <header className="fixed top-0 left-0 right-0 z-50 card-elevated border-b border-gray-light/20 bg-gray-dark/95 backdrop-blur-sm">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-xl font-bold gradient-text">
+          <div className="text-xl font-bold font-prompt text-white">
             Portfolio
           </div>
 
@@ -28,24 +28,24 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-300 relative group"
+                className="text-gray-light hover:text-white transition-colors duration-300 relative group font-karla"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
           </div>
 
           {/* Download Resume Button */}
           <div className="hidden md:block">
-            <Button variant="hero" size="sm">
+            <Button variant="active" size="sm" className="font-prompt font-medium">
               Download Resume
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 text-white hover:text-gray-light transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -54,18 +54,18 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-4 border-t border-white/10 pt-4">
+          <div className="md:hidden mt-4 pb-4 space-y-4 border-t border-gray-light/20 pt-4">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="block text-muted-foreground hover:text-foreground transition-colors duration-300"
+                className="block text-gray-light hover:text-white transition-colors duration-300 font-karla"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
               </a>
             ))}
-            <Button variant="hero" size="sm" className="w-full mt-4">
+            <Button variant="active" size="sm" className="w-full mt-4 font-prompt font-medium">
               Download Resume
             </Button>
           </div>

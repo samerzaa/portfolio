@@ -5,18 +5,20 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105",
+        default: "bg-gray-medium text-white hover:bg-gray-light hover:scale-[1.02]",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-white/20 bg-transparent text-foreground hover:bg-white/10 backdrop-blur-sm",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-gradient-to-r from-primary to-accent text-foreground hover:shadow-lg hover:shadow-primary/25 hover:scale-105 font-semibold",
-        glass: "glass-card text-foreground hover:bg-white/20 border-white/20",
+        outline: "border border-gray-light text-gray-light hover:bg-gray-light hover:text-gray-dark",
+        secondary: "bg-gray-light text-gray-dark hover:bg-white",
+        ghost: "hover:bg-gray-medium/20 hover:text-white",
+        link: "text-gray-light underline-offset-4 hover:underline hover:text-white",
+        primary: "bg-gray-medium text-white hover:bg-gray-light hover:scale-[1.02]",
+        active: "bg-white text-gray-dark hover:bg-gray-light hover:text-white",
+        hero: "bg-gradient-to-r from-gray-medium to-gray-light text-white hover:scale-[1.02] font-semibold",
+        glass: "bg-gray-medium/30 backdrop-blur-sm border border-gray-light/30 text-white hover:bg-gray-medium/50",
       },
       size: {
         default: "h-10 px-4 py-2",

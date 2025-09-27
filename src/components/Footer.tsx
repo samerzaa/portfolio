@@ -3,28 +3,28 @@ import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-white/10 bg-black/20 backdrop-blur-sm">
+    <footer className="border-t border-gray-light/20 bg-gray-dark/50 backdrop-blur-sm">
       <div className="container mx-auto px-6 py-12">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-xl font-bold gradient-text mb-4">
+            <h3 className="text-xl font-bold text-white mb-4 font-prompt">
               Portfolio
             </h3>
-            <p className="text-muted-foreground">
+            <p className="text-gray-light font-karla">
               Crafting digital experiences with modern web technologies.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <h4 className="font-semibold mb-4 font-prompt text-white">Quick Links</h4>
             <div className="space-y-2">
               {["Home", "About", "Skills", "Projects", "Contact"].map((link) => (
                 <a 
                   key={link}
                   href={`#${link.toLowerCase()}`}
-                  className="block text-muted-foreground hover:text-foreground transition-colors duration-300"
+                  className="block text-gray-light hover:text-white transition-colors duration-300 font-karla"
                 >
                   {link}
                 </a>
@@ -34,15 +34,15 @@ const Footer = () => {
 
           {/* Social */}
           <div>
-            <h4 className="font-semibold mb-4">Connect</h4>
+            <h4 className="font-semibold mb-4 font-prompt text-white">Connect</h4>
             <div className="flex gap-3">
-              <Button variant="glass" size="icon" className="rounded-full">
+              <Button variant="secondary" size="icon" className="rounded-full">
                 <Github size={18} />
               </Button>
-              <Button variant="glass" size="icon" className="rounded-full">
+              <Button variant="secondary" size="icon" className="rounded-full">
                 <Linkedin size={18} />
               </Button>
-              <Button variant="glass" size="icon" className="rounded-full">
+              <Button variant="secondary" size="icon" className="rounded-full">
                 <Mail size={18} />
               </Button>
             </div>
@@ -50,11 +50,11 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-white/10 pt-8 text-center">
-          <p className="text-muted-foreground flex items-center justify-center gap-2">
-            Made with <Heart size={16} className="text-primary animate-pulse" /> using React & Tailwind CSS
+        <div className="border-t border-gray-light/20 pt-8 text-center">
+          <p className="text-gray-light flex items-center justify-center gap-2 font-karla">
+            Made with <Heart size={16} className="text-white animate-pulse" /> using React & Tailwind CSS
           </p>
-          <p className="text-sm text-muted-foreground mt-2">
+          <p className="text-sm text-gray-light mt-2 font-karla">
             © 2024 Developer Portfolio. All rights reserved.
           </p>
         </div>

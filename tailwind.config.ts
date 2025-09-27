@@ -13,6 +13,11 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'prompt': ['Prompt', 'sans-serif'],
+        'karla': ['Karla', 'sans-serif'],
+        'sans': ['Karla', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -47,16 +52,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
+        // Custom grayscale palette
+        'gray-dark': "hsl(var(--gray-dark))",
+        'gray-medium': "hsl(var(--gray-medium))",
+        'gray-light': "hsl(var(--gray-light))",
+        'white': "hsl(var(--white))",
       },
       borderRadius: {
         lg: "var(--radius)",

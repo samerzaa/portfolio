@@ -15,8 +15,8 @@ const FloatingTechIcon = ({ Icon, className = "", delay = 0 }: FloatingTechIconP
         animationDuration: `${6 + Math.random() * 2}s`
       }}
     >
-      <div className="p-3 glass-card rounded-full glow-effect hover:scale-110 transition-transform duration-300">
-        <Icon size={20} className="text-primary" />
+      <div className="p-3 card-elevated rounded-full subtle-glow hover:scale-110 transition-transform duration-300 bg-gray-medium/50 backdrop-blur-sm border border-gray-light/20">
+        <Icon size={20} className="text-white" />
       </div>
     </div>
   );

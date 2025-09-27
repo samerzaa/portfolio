@@ -28,22 +28,22 @@ const HeroSection = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-medium/10 via-transparent to-gray-light/5"></div>
       
       <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
         {/* Left side - Text content */}
         <div className="space-y-8 animate-slide-up">
           <div className="space-y-4">
-            <h1 className="text-5xl lg:text-7xl font-bold">
+            <h1 className="text-5xl lg:text-7xl font-bold font-prompt">
               Hi, I'm{" "}
-              <span className="gradient-text">
+              <span className="text-white">
                 Developer
               </span>
             </h1>
-            <h2 className="text-2xl lg:text-3xl text-primary font-semibold">
+            <h2 className="text-2xl lg:text-3xl text-gray-light font-semibold font-prompt">
               Full Stack Developer
             </h2>
-            <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
+            <p className="text-lg text-gray-light max-w-lg leading-relaxed font-karla">
               Crafting modern, responsive, and user-friendly websites with passion and precision. 
               Specializing in React, Node.js, and modern web technologies.
             </p>
@@ -51,24 +51,24 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button variant="hero" size="lg" className="group">
+            <Button variant="active" size="lg" className="group font-prompt font-medium">
               <Download className="mr-2 group-hover:animate-bounce" />
               Download Resume
             </Button>
-            <Button variant="outline" size="lg">
+            <Button variant="outline" size="lg" className="font-prompt">
               View Projects
             </Button>
           </div>
 
           {/* Social Links */}
           <div className="flex gap-4">
-            <Button variant="glass" size="icon" className="rounded-full">
+            <Button variant="secondary" size="icon" className="rounded-full">
               <Github size={20} />
             </Button>
-            <Button variant="glass" size="icon" className="rounded-full">
+            <Button variant="secondary" size="icon" className="rounded-full">
               <Linkedin size={20} />
             </Button>
-            <Button variant="glass" size="icon" className="rounded-full">
+            <Button variant="secondary" size="icon" className="rounded-full">
               <Mail size={20} />
             </Button>
           </div>
@@ -78,7 +78,7 @@ const HeroSection = () => {
         <div className="relative flex justify-center lg:justify-end">
           <div className="relative">
             {/* Main profile image */}
-            <div className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-primary/20 glow-effect animate-pulse-glow">
+            <div className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-gray-light/30 subtle-glow">
               <img 
                 src={heroImage} 
                 alt="Developer profile" 

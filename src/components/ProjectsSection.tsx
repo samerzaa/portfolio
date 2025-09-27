@@ -33,10 +33,10 @@ const ProjectsSection = () => {
     <section id="projects" className="py-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            Featured <span className="gradient-text">Projects</span>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4 font-prompt">
+            Featured <span className="text-white">Projects</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-gray-light max-w-2xl mx-auto font-karla">
             A showcase of my recent work and personal projects
           </p>
         </div>
@@ -45,7 +45,7 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <div 
               key={project.title}
-              className="glass-card rounded-2xl overflow-hidden hover:scale-105 transition-all duration-300 group"
+              className="card-elevated rounded-2xl overflow-hidden hover:scale-105 transition-all duration-300 group bg-gray-medium/30 border border-gray-light/20"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Project Image */}
@@ -60,11 +60,11 @@ const ProjectsSection = () => {
 
               {/* Project Content */}
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">
+                <h3 className="text-xl font-semibold mb-3 group-hover:text-white transition-colors duration-300 font-prompt text-white">
                   {project.title}
                 </h3>
                 
-                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                <p className="text-gray-light mb-4 text-sm leading-relaxed font-karla">
                   {project.description}
                 </p>
 
@@ -73,7 +73,7 @@ const ProjectsSection = () => {
                   {project.tech.map((tech) => (
                     <span 
                       key={tech}
-                      className="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full border border-primary/30"
+                      className="px-3 py-1 bg-gray-light/20 text-white text-xs rounded-full border border-gray-light/30 font-karla"
                     >
                       {tech}
                     </span>
@@ -82,11 +82,11 @@ const ProjectsSection = () => {
 
                 {/* Project Links */}
                 <div className="flex gap-3">
-                  <Button variant="outline" size="sm" className="flex-1">
+                  <Button variant="outline" size="sm" className="flex-1 font-prompt">
                     <ExternalLink size={16} className="mr-2" />
                     Live Demo
                   </Button>
-                  <Button variant="glass" size="sm" className="flex-1">
+                  <Button variant="secondary" size="sm" className="flex-1 font-prompt">
                     <Github size={16} className="mr-2" />
                     Code
                   </Button>
@@ -97,7 +97,7 @@ const ProjectsSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="hero" size="lg">
+          <Button variant="active" size="lg" className="font-prompt font-medium">
             View All Projects
           </Button>
         </div>
