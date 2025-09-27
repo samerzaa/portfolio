@@ -34,7 +34,9 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-medium font-prompt text-white">Email</h4>
-                  <p className="text-gray-light font-karla">hello@developer.com</p>
+                  <a href="samereya428@gmail.com" target="_blank" rel="noopener noreferrer" className="text-gray-light font-karla hover:font-medium hover:text-white transition-colors duration-300">
+                    samereya428@gmail.com
+                  </a>
                 </div>
               </div>
 
@@ -44,7 +46,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-medium font-prompt text-white">Phone</h4>
-                  <p className="text-gray-light font-karla">+1 (555) 123-4567</p>
+                  <p className="text-gray-light font-karla">+216 21 397 585</p>
                 </div>
               </div>
 
@@ -54,7 +56,9 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-medium font-prompt text-white">Location</h4>
-                  <p className="text-gray-light font-karla">San Francisco, CA</p>
+                  <a href="https://maps.app.goo.gl/YXbU3LhYfEmwvwWJ9" target="_blank" rel="noopener noreferrer" className="text-gray-light font-karla hover:font-medium hover:text-white transition-colors duration-300">
+                    PP9C+H4P, Sfax, Tunisia
+                  </a>
                 </div>
               </div>
             </div>

@@ -146,6 +146,15 @@
   }
 }
 
+@keyframes fade-out {
+  from { 
+    opacity: 1; 
+  }
+  to { 
+    opacity: 0; 
+  }
+}
+
 /* Updated component classes for new design system */
 @layer components {
   .card-elevated {

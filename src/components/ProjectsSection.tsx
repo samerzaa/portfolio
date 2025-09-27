@@ -4,28 +4,12 @@ import { Button } from "@/components/ui/button";
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product management, and real-time notifications.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      title: "Task Management App",
-      description: "A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop", 
-      tech: ["Next.js", "TypeScript", "Supabase", "Tailwind"],
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      title: "AI Chat Application",
-      description: "An intelligent chatbot application with natural language processing, real-time messaging, and integration with multiple AI models.",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
-      tech: ["React", "Python", "OpenAI", "WebSockets"],
-      liveUrl: "#", 
-      githubUrl: "#"
+      title: "Coffee Menu Website(CRAFT)",
+      description: "Craft Coffee is a static coming-soon landing page deployed on Vercel, built with a minimal React + Vite setup and simple placeholder text while the full site is in development.",
+      image: "/assets/craft.webp",
+      tech: ["React", "Node.js", "Tailwind CSS"],
+      liveUrl: "https://craft-coffe-five.vercel.app/",
+      githubUrl: "https://github.com/samerzaa/Craft-coffe"
     }
   ];
 
@@ -82,14 +66,18 @@ const ProjectsSection = () => {
 
                 {/* Project Links */}
                 <div className="flex gap-3">
-                  <Button variant="outline" size="sm" className="flex-1 font-prompt">
-                    <ExternalLink size={16} className="mr-2" />
-                    Live Demo
-                  </Button>
-                  <Button variant="secondary" size="sm" className="flex-1 font-prompt">
-                    <Github size={16} className="mr-2" />
-                    Code
-                  </Button>
+                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="sm" className="flex-1 font-prompt">
+                      <ExternalLink size={16} className="mr-2"/>
+                      Live Demo
+                    </Button>
+                  </a>
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                    <Button variant="secondary" size="sm" className="flex-1 font-prompt">
+                      <Github size={16} className="mr-2" />
+                      Code
+                    </Button>
+                  </a>
                 </div>
               </div>
             </div>
