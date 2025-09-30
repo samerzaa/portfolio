@@ -79,7 +79,7 @@ const HeroSection = () => {
                 </span>
               </h1>
               <h2 className="text-xl text-gray-light font-semibold font-prompt">
-                Full Stack Developer
+                Computer Science Student
               </h2>
               <p className="text-base text-gray-light max-w-lg leading-relaxed font-karla">
                 Crafting modern, responsive, and user-friendly websites with passion and precision. 

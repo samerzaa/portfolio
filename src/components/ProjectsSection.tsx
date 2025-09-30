@@ -4,13 +4,21 @@ import { Button } from "@/components/ui/button";
 const ProjectsSection = () => {
   const projects = [
     {
+      title: "Portfolio website",
+      description: "Personal portfolio showcasing full-stack web development skills, projects, and problem-solving abilities through a clean, modern design.",
+      image: "/assets/portfolio.webp",
+      tech: ["React", "Node.js", "Tailwind CSS"],
+      liveUrl: "https://portfolio-samerza.vercel.app/",
+      githubUrl: "https://github.com/samerzaa/portfolio"
+    },
+    {
       title: "Coffee Menu Website(CRAFT)",
       description: "Craft Coffee is a static coming-soon landing page deployed on Vercel, built with a minimal React + Vite setup and simple placeholder text while the full site is in development.",
       image: "/assets/craft.webp",
       tech: ["React", "Node.js", "Tailwind CSS"],
       liveUrl: "https://craft-coffe-five.vercel.app/",
       githubUrl: "https://github.com/samerzaa/Craft-coffe"
-    }
+    },
   ];
 
   return (
