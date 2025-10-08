@@ -13,6 +13,20 @@ const Header = () => {
     { name: "Contact", href: "#contact" },
   ];
 
+  const handleDownloadResume = () => {
+    // Direct download link for Google Drive file
+    const resumeUrl = 'https://drive.google.com/uc?export=download&id=1kuGOjKnY2D45QarS-98VQqZbdV0Ec1ji';
+    
+    // Create a temporary anchor element to trigger download
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+    link.download = 'Samer_Magtouf_Resume.pdf';
+    link.target = '_blank';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const handleNavClick = (href: string) => {
     setIsMenuOpen(false); // Close mobile menu
     
@@ -54,7 +68,7 @@ const Header = () => {
 
           {/* Download Resume Button */}
           <div className="hidden md:block">
-            <Button variant="active" size="sm" className="font-prompt font-medium">
+            <Button variant="active" size="sm" className="font-prompt font-medium" onClick={handleDownloadResume}>
               Download Resume
             </Button>
           </div>
@@ -113,6 +127,7 @@ const Header = () => {
               style={{
                 transitionDelay: isMenuOpen ? `${navItems.length * 100}ms` : '0ms'
               }}
+              onClick={handleDownloadResume}
             >
               Download Resume
             </Button>

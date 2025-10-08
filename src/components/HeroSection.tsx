@@ -25,6 +25,20 @@ const HeroSection = () => {
     { Icon: Cpu, angle: 315, delay: 3.5 },
   ];
 
+  const handleDownloadResume = () => {
+    // Direct download link for Google Drive file
+    const resumeUrl = 'https://drive.google.com/uc?export=download&id=1kuGOjKnY2D45QarS-98VQqZbdV0Ec1ji';
+    
+    // Create a temporary anchor element to trigger download
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+    link.download = 'Samer_Magtouf_Resume.pdf';
+    link.target = '_blank';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   // Typewriter animations for titles
   const { displayText: mobileTitle, isComplete: mobileComplete } = useTypewriter({ 
     text: "Hi, I'm Samer", 
@@ -50,7 +64,7 @@ const HeroSection = () => {
           <div className="relative">
             <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-gray-light/30 subtle-glow">
               <img 
-                src="/assets/hero-image.jpg" 
+                src="/assets/hero-image.webp" 
                 alt="Developer profile" 
                 className="w-full h-full object-cover"
               />
@@ -89,7 +103,7 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col gap-4">
-              <Button variant="active" size="lg" className="group font-prompt font-medium">
+              <Button variant="active" size="lg" className="group font-prompt font-medium" onClick={handleDownloadResume}>
                 <Download className="mr-2 group-hover:animate-bounce" />
                 Download Resume
               </Button>
@@ -141,7 +155,7 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="active" size="lg" className="group font-prompt font-medium">
+              <Button variant="active" size="lg" className="group font-prompt font-medium" onClick={handleDownloadResume}>
                 <Download className="mr-2 group-hover:animate-bounce" />
                 Download Resume
               </Button>
@@ -176,7 +190,7 @@ const HeroSection = () => {
               {/* Main profile image */}
               <div className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-gray-light/30 subtle-glow">
                 <img 
-                  src="/assets/hero-image.jpg" 
+                  src="/assets/hero-image.webp" 
                   alt="Developer profile" 
                   className="w-full h-full object-cover"
                 />

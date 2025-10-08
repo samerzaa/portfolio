@@ -9,9 +9,9 @@ const AboutSection = () => {
             <div className="relative">
               <div className="w-full h-[500px] rounded-2xl overflow-hidden">
                 <img 
-                  src="/assets/hero-image.jpg" 
+                  src="/assets/hero-image.webp" 
                   alt="About me" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover "
                 />
               </div>
               {/* Decorative dots pattern */}
