@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Code, Database, Smartphone, Globe, Terminal, Layers, Server, Cpu } from "lucide-react";
 
 const LoadingPage = () => {
   const [loadingText, setLoadingText] = useState("");
@@ -7,7 +6,7 @@ const LoadingPage = () => {
   const [showContent, setShowContent] = useState(false);
 
   const fullText = "Loading Portfolio...";
-  const techIcons = [Code, Database, Smartphone, Globe, Terminal, Layers, Server, Cpu];
+  
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -64,31 +63,16 @@ const LoadingPage = () => {
           </h2>
         </div>
 
-        {/* Floating tech icons */}
-        <div className="relative w-32 h-32 mx-auto mb-8">
-          {techIcons.map((Icon, index) => {
-            const angle = (index * 45) * (Math.PI / 180);
-            const radius = 60;
-            const x = 64 + radius * Math.cos(angle) - 16;
-            const y = 64 + radius * Math.sin(angle) - 16;
-
-            return (
-              <div
-                key={index}
-                className="absolute animate-spin"
-                style={{
-                  left: `${x}px`,
-                  top: `${y}px`,
-                  animationDuration: `${8 + index * 0.5}s`,
-                  animationDelay: `${index * 0.2}s`
-                }}
-              >
-                <div className="p-2 rounded-full bg-gray-medium/50 backdrop-blur-sm border border-gray-light/20">
-                  <Icon size={16} className="text-white" />
-                </div>
-              </div>
-            );
-          })}
+        {/* Loading animation video */}
+        <div className="relative w-32 h-32 mx-auto mb-8 rounded-xl overflow-hidden">
+          <video
+            src="/assets/load.webm"
+            className="w-full h-full object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
         </div>
 
         {/* Progress bar */}

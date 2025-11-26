@@ -6,21 +6,16 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Image */}
           <div className="order-2 lg:order-1">
-            <div className="relative">
+            <div>
               <div className="w-full h-[500px] rounded-2xl overflow-hidden">
-                <img 
-                  src="/assets/hero-image.webp" 
-                  alt="About me" 
-                  className="w-full h-full object-cover "
+                <video
+                  src="/assets/seo.webm"
+                  className="w-full h-full object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                 />
-              </div>
-              {/* Decorative dots pattern */}
-              <div className="absolute top-4 right-4 w-16 h-16 opacity-20">
-                <div className="grid grid-cols-4 gap-1 h-full">
-                  {Array.from({ length: 16 }).map((_, i) => (
-                    <div key={i} className="w-2 h-2 bg-gray-light rounded-full"></div>
-                  ))}
-                </div>
               </div>
             </div>
           </div>
@@ -42,7 +37,7 @@ const AboutSection = () => {
         <div className="mt-20">
           {/* Animated Skills Container */}
           <div className="relative overflow-hidden">
-            <div className="flex animate-scroll">
+            <div className="flex animate-[scroll_14s_linear_infinite] md:animate-scroll">
               {/* First set of skills */}
               <div className="flex items-center space-x-16 flex-shrink-0">
                 <div className="flex items-center space-x-3">
