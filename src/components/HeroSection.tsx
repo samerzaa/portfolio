@@ -12,6 +12,7 @@ import {
   Server,
   Cpu
 } from "lucide-react";
+import Snowfall from "react-snowfall"
 
 const HeroSection = () => {
   const techIcons = [
@@ -54,6 +55,7 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+      <Snowfall color="#82C3D9" />
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-medium/10 via-transparent to-gray-light/5"></div>
       
