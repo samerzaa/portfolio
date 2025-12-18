@@ -15,7 +15,7 @@ const Header = () => {
 
   const handleDownloadResume = () => {
     // Direct download link for Google Drive file
-    const resumeUrl = 'https://drive.google.com/file/d/1ih1uO0iSU35c2IyhLfckSZMPbFl7gZ3g/view?usp=drive_link';
+    const resumeUrl = 'https://drive.google.com/file/d/1cX22lwDwTQzExCBYIMFt9ut8hegqu7Xl/view?usp=drive_link';
     
     // Create a temporary anchor element to trigger download
     const link = document.createElement('a');
