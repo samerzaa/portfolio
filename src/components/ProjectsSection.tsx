@@ -19,6 +19,12 @@ const ProjectsSection = () => {
       liveUrl: "https://craft-coffe-five.vercel.app/",
       githubUrl: "https://github.com/samerzaa/Craft-coffe"
     },
+    {
+      title: "POS system(Hsouna)",
+      description: "A local-first Point of Sale system built with a modular architecture, featuring a transactional sales engine, configurable inventory tracking (tracked/untracked stock), user role management, and invoice generation. The system operates fully offline using a local PostgreSQL database, supports multi-terminal synchronization over a local network, and is designed to be packaged as a Windows desktop application with automated startup scripts.",
+      image: "/assets/pos hsouna.webp",
+      tech: ["React", "Tailwind CSS", "TypeScript", "Node.js", "Express", "Postgres"]
+    },
   ];
 
   return (
@@ -35,15 +41,15 @@ const ProjectsSection = () => {
 
         <div className="grid lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div 
+            <div
               key={project.title}
               className="card-elevated rounded-2xl overflow-hidden hover:scale-105 transition-all duration-300 group bg-gray-medium/30 border border-gray-light/20"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Project Image */}
               <div className="relative overflow-hidden">
-                <img 
-                  src={project.image} 
+                <img
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -55,7 +61,7 @@ const ProjectsSection = () => {
                 <h3 className="text-xl font-semibold mb-3 group-hover:text-white transition-colors duration-300 font-prompt text-white">
                   {project.title}
                 </h3>
-                
+
                 <p className="text-gray-light mb-4 text-sm leading-relaxed font-karla">
                   {project.description}
                 </p>
@@ -63,7 +69,7 @@ const ProjectsSection = () => {
                 {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech.map((tech) => (
-                    <span 
+                    <span
                       key={tech}
                       className="px-3 py-1 bg-gray-light/20 text-white text-xs rounded-full border border-gray-light/30 font-karla"
                     >
@@ -74,18 +80,22 @@ const ProjectsSection = () => {
 
                 {/* Project Links */}
                 <div className="flex gap-3">
-                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" size="sm" className="flex-1 font-prompt">
-                      <ExternalLink size={16} className="mr-2"/>
-                      Live Demo
-                    </Button>
-                  </a>
-                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                    <Button variant="secondary" size="sm" className="flex-1 font-prompt">
-                      <Github size={16} className="mr-2" />
-                      Code
-                    </Button>
-                  </a>
+                  {project.liveUrl && (
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="sm" className="flex-1 font-prompt">
+                        <ExternalLink size={16} className="mr-2" />
+                        Live Demo
+                      </Button>
+                    </a>
+                  )}
+                  {project.githubUrl && (
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                      <Button variant="secondary" size="sm" className="flex-1 font-prompt">
+                        <Github size={16} className="mr-2" />
+                        Code
+                      </Button>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

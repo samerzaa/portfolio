@@ -29,6 +29,7 @@ const SkillsSection = () => {
       title: "Database & Cloud",
       skills: [
         { name: "Mysql", level: 80 },
+        { name: "Postgres", level: 80 },
         { name: "Supabase", level: 80 },
         { name: "MongoDB", level: 60 },
         { name: "Docker", level: 60 }
