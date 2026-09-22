@@ -28,7 +28,7 @@ const HeroSection = () => {
 
   const handleDownloadResume = () => {
     // Direct download link for Google Drive file
-    const resumeUrl = 'https://drive.google.com/file/d/1cX22lwDwTQzExCBYIMFt9ut8hegqu7Xl/view?usp=drive_link';
+    const resumeUrl = 'https://drive.google.com/file/d/17Tmr4JgsxVMGw933ik1Y0sDEY7oSnpz4/view?usp=drive_link';
     
     // Create a temporary anchor element to trigger download
     const link = document.createElement('a');
